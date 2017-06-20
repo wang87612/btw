@@ -13,7 +13,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object SparkWriteParquet {
 
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("SparkWriteParquet")
+    val conf = new SparkConf().setAppName("SparkWriteParquet").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val hiveContext = new HiveContext(sc)
 
@@ -51,7 +51,7 @@ object SparkWriteParquet {
 
     idAgeDF.map(s => s).groupBy(s => s).collect()
 
-    //idAgeDF.write.parquet("./" + System.currentTimeMillis)
+    idAgeDF.write.parquet(System.currentTimeMillis+"")
     //
     //  val par = hiveContext.read.parquet("./1480505449399/part-r-00000-94c95003-bbfb-4634-9401-1b1a5f64f84e.gz.parquet")
     //  par.show(10)
