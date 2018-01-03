@@ -6,10 +6,22 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object ReadParquet extends App{
 
-  val conf = new SparkConf().setAppName("SparkWriteParquet").setMaster("local[*]")
+  val conf = new SparkConf().setAppName("ReadParquet").setMaster("local[*]")
   val sc = new SparkContext(conf)
   val hiveContext = new HiveContext(sc)
-
-  hiveContext.read.parquet("file:///Users/btw/Downloads/part-r-00000-4bd8b17a-46e0-4e11-a180-a8e99971f557.gz.parquet").printSchema()
+  val hcp1 = hiveContext.read.parquet("file:///Users/btw/Downloads/gaojiazheng")
+  (hcp1.printSchema())
+  (hcp1.show(100))
 
 }
+
+
+
+
+
+
+
+
+
+
+

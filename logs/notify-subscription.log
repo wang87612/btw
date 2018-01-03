@@ -1,0 +1,498 @@
+2017-12-28 13:28:25,791 - Running Spark version 1.6.3
+2017-12-28 13:28:26,089 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-12-28 13:28:26,257 - Changing view acls to: btw
+2017-12-28 13:28:26,259 - Changing modify acls to: btw
+2017-12-28 13:28:26,260 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(btw); users with modify permissions: Set(btw)
+2017-12-28 13:28:26,748 - Successfully started service 'sparkDriver' on port 58111.
+2017-12-28 13:28:27,047 - Slf4jLogger started
+2017-12-28 13:28:27,076 - Starting remoting
+2017-12-28 13:28:27,191 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@172.16.0.43:58112]
+2017-12-28 13:28:27,195 - Successfully started service 'sparkDriverActorSystem' on port 58112.
+2017-12-28 13:28:27,205 - Registering MapOutputTracker
+2017-12-28 13:28:27,218 - Registering BlockManagerMaster
+2017-12-28 13:28:27,230 - Created local directory at /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/blockmgr-946d728f-e41f-4191-ba05-945982f42b21
+2017-12-28 13:28:27,243 - MemoryStore started with capacity 2.4 GB
+2017-12-28 13:28:27,283 - Registering OutputCommitCoordinator
+2017-12-28 13:28:27,435 - jetty-8.y.z-SNAPSHOT
+2017-12-28 13:28:27,483 - Started SelectChannelConnector@account.jetbrains.com:4040
+2017-12-28 13:28:27,483 - Successfully started service 'SparkUI' on port 4040.
+2017-12-28 13:28:27,485 - Started SparkUI at http://172.16.0.43:4040
+2017-12-28 13:28:27,569 - Starting executor ID driver on host localhost
+2017-12-28 13:28:27,585 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58113.
+2017-12-28 13:28:27,585 - Server created on 58113
+2017-12-28 13:28:27,586 - Trying to register BlockManager
+2017-12-28 13:28:27,589 - Registering block manager localhost:58113 with 2.4 GB RAM, BlockManagerId(driver, localhost, 58113)
+2017-12-28 13:28:27,591 - Registered BlockManager
+2017-12-28 13:28:28,131 - Starting job: collect at Spark.scala:25
+2017-12-28 13:28:28,148 - Registering RDD 1 (map at Spark.scala:23)
+2017-12-28 13:28:28,151 - Got job 0 (collect at Spark.scala:25) with 1 output partitions
+2017-12-28 13:28:28,151 - Final stage: ResultStage 1 (collect at Spark.scala:25)
+2017-12-28 13:28:28,152 - Parents of final stage: List(ShuffleMapStage 0)
+2017-12-28 13:28:28,153 - Missing parents: List(ShuffleMapStage 0)
+2017-12-28 13:28:28,159 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23), which has no missing parents
+2017-12-28 13:28:28,249 - Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 2.4 GB)
+2017-12-28 13:28:28,258 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1860.0 B, free 2.4 GB)
+2017-12-28 13:28:28,260 - Added broadcast_0_piece0 in memory on localhost:58113 (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:28:28,261 - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:28:28,264 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23)
+2017-12-28 13:28:28,266 - Adding task set 0.0 with 1 tasks
+2017-12-28 13:28:28,298 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2043 bytes)
+2017-12-28 13:28:28,304 - Running task 0.0 in stage 0.0 (TID 0)
+2017-12-28 13:28:28,353 - Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+2017-12-28 13:28:28,359 - Finished task 0.0 in stage 0.0 (TID 0) in 76 ms on localhost (1/1)
+2017-12-28 13:28:28,360 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-12-28 13:28:28,362 - ShuffleMapStage 0 (map at Spark.scala:23) finished in 0.088 s
+2017-12-28 13:28:28,363 - looking for newly runnable stages
+2017-12-28 13:28:28,363 - running: Set()
+2017-12-28 13:28:28,363 - waiting: Set(ResultStage 1)
+2017-12-28 13:28:28,364 - failed: Set()
+2017-12-28 13:28:28,365 - Submitting ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25), which has no missing parents
+2017-12-28 13:28:28,370 - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 2.4 GB)
+2017-12-28 13:28:28,372 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2.4 GB)
+2017-12-28 13:28:28,373 - Added broadcast_1_piece0 in memory on localhost:58113 (size: 2.1 KB, free: 2.4 GB)
+2017-12-28 13:28:28,373 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:28:28,374 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25)
+2017-12-28 13:28:28,374 - Adding task set 1.0 with 1 tasks
+2017-12-28 13:28:28,379 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1813 bytes)
+2017-12-28 13:28:28,379 - Running task 0.0 in stage 1.0 (TID 1)
+2017-12-28 13:28:28,391 - Getting 1 non-empty blocks out of 1 blocks
+2017-12-28 13:28:28,392 - Started 0 remote fetches in 3 ms
+2017-12-28 13:28:28,423 - Finished task 0.0 in stage 1.0 (TID 1). 1729 bytes result sent to driver
+2017-12-28 13:28:28,424 - Finished task 0.0 in stage 1.0 (TID 1) in 47 ms on localhost (1/1)
+2017-12-28 13:28:28,424 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-12-28 13:28:28,425 - ResultStage 1 (collect at Spark.scala:25) finished in 0.049 s
+2017-12-28 13:28:28,430 - Job 0 finished: collect at Spark.scala:25, took 0.298276 s
+2017-12-28 13:28:28,438 - Invoking stop() from shutdown hook
+2017-12-28 13:28:28,467 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-12-28 13:28:28,467 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-12-28 13:28:28,467 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-12-28 13:28:28,468 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-12-28 13:28:28,468 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-12-28 13:28:28,468 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-12-28 13:28:28,468 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-12-28 13:28:28,469 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-12-28 13:28:28,469 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-12-28 13:28:28,469 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-12-28 13:28:28,470 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-12-28 13:28:28,471 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-12-28 13:28:28,472 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-12-28 13:28:28,525 - Stopped Spark web UI at http://172.16.0.43:4040
+2017-12-28 13:28:28,539 - MapOutputTrackerMasterEndpoint stopped!
+2017-12-28 13:28:28,545 - MemoryStore cleared
+2017-12-28 13:28:28,545 - BlockManager stopped
+2017-12-28 13:28:28,550 - BlockManagerMaster stopped
+2017-12-28 13:28:28,552 - OutputCommitCoordinator stopped!
+2017-12-28 13:28:28,555 - Successfully stopped SparkContext
+2017-12-28 13:28:28,556 - Shutdown hook called
+2017-12-28 13:28:28,560 - Deleting directory /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/spark-109c8538-e2cc-41c1-bfd8-984d31c052a9
+2017-12-28 13:29:13,514 - Running Spark version 1.6.3
+2017-12-28 13:29:13,811 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-12-28 13:29:13,975 - Changing view acls to: btw
+2017-12-28 13:29:13,977 - Changing modify acls to: btw
+2017-12-28 13:29:13,977 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(btw); users with modify permissions: Set(btw)
+2017-12-28 13:29:14,422 - Successfully started service 'sparkDriver' on port 58157.
+2017-12-28 13:29:14,709 - Slf4jLogger started
+2017-12-28 13:29:14,737 - Starting remoting
+2017-12-28 13:29:14,845 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@172.16.0.43:58158]
+2017-12-28 13:29:14,849 - Successfully started service 'sparkDriverActorSystem' on port 58158.
+2017-12-28 13:29:14,858 - Registering MapOutputTracker
+2017-12-28 13:29:14,871 - Registering BlockManagerMaster
+2017-12-28 13:29:14,882 - Created local directory at /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/blockmgr-bc8e3258-cea3-4c80-939a-5060121e78a7
+2017-12-28 13:29:14,895 - MemoryStore started with capacity 2.4 GB
+2017-12-28 13:29:14,942 - Registering OutputCommitCoordinator
+2017-12-28 13:29:15,091 - jetty-8.y.z-SNAPSHOT
+2017-12-28 13:29:15,129 - Started SelectChannelConnector@account.jetbrains.com:4040
+2017-12-28 13:29:15,130 - Successfully started service 'SparkUI' on port 4040.
+2017-12-28 13:29:15,131 - Started SparkUI at http://172.16.0.43:4040
+2017-12-28 13:29:15,202 - Starting executor ID driver on host localhost
+2017-12-28 13:29:15,217 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58159.
+2017-12-28 13:29:15,217 - Server created on 58159
+2017-12-28 13:29:15,218 - Trying to register BlockManager
+2017-12-28 13:29:15,220 - Registering block manager localhost:58159 with 2.4 GB RAM, BlockManagerId(driver, localhost, 58159)
+2017-12-28 13:29:15,222 - Registered BlockManager
+2017-12-28 13:29:15,762 - Starting job: collect at Spark.scala:25
+2017-12-28 13:29:15,783 - Registering RDD 1 (map at Spark.scala:23)
+2017-12-28 13:29:15,785 - Got job 0 (collect at Spark.scala:25) with 1 output partitions
+2017-12-28 13:29:15,785 - Final stage: ResultStage 1 (collect at Spark.scala:25)
+2017-12-28 13:29:15,786 - Parents of final stage: List(ShuffleMapStage 0)
+2017-12-28 13:29:15,787 - Missing parents: List(ShuffleMapStage 0)
+2017-12-28 13:29:15,793 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23), which has no missing parents
+2017-12-28 13:29:15,881 - Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 2.4 GB)
+2017-12-28 13:29:15,890 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1860.0 B, free 2.4 GB)
+2017-12-28 13:29:15,892 - Added broadcast_0_piece0 in memory on localhost:58159 (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:29:15,893 - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:29:15,896 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23)
+2017-12-28 13:29:15,898 - Adding task set 0.0 with 1 tasks
+2017-12-28 13:29:15,929 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2043 bytes)
+2017-12-28 13:29:15,935 - Running task 0.0 in stage 0.0 (TID 0)
+2017-12-28 13:29:15,982 - Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+2017-12-28 13:29:15,988 - Finished task 0.0 in stage 0.0 (TID 0) in 74 ms on localhost (1/1)
+2017-12-28 13:29:15,989 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-12-28 13:29:15,991 - ShuffleMapStage 0 (map at Spark.scala:23) finished in 0.085 s
+2017-12-28 13:29:15,991 - looking for newly runnable stages
+2017-12-28 13:29:15,992 - running: Set()
+2017-12-28 13:29:15,992 - waiting: Set(ResultStage 1)
+2017-12-28 13:29:15,992 - failed: Set()
+2017-12-28 13:29:15,994 - Submitting ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25), which has no missing parents
+2017-12-28 13:29:15,999 - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 2.4 GB)
+2017-12-28 13:29:16,001 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2.4 GB)
+2017-12-28 13:29:16,002 - Added broadcast_1_piece0 in memory on localhost:58159 (size: 2.1 KB, free: 2.4 GB)
+2017-12-28 13:29:16,002 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:29:16,003 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25)
+2017-12-28 13:29:16,003 - Adding task set 1.0 with 1 tasks
+2017-12-28 13:29:16,008 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1813 bytes)
+2017-12-28 13:29:16,008 - Running task 0.0 in stage 1.0 (TID 1)
+2017-12-28 13:29:16,023 - Getting 1 non-empty blocks out of 1 blocks
+2017-12-28 13:29:16,024 - Started 0 remote fetches in 6 ms
+2017-12-28 13:29:16,061 - Finished task 0.0 in stage 1.0 (TID 1). 1729 bytes result sent to driver
+2017-12-28 13:29:16,061 - Removed broadcast_0_piece0 on localhost:58159 in memory (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:29:16,063 - Finished task 0.0 in stage 1.0 (TID 1) in 57 ms on localhost (1/1)
+2017-12-28 13:29:16,063 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-12-28 13:29:16,064 - ResultStage 1 (collect at Spark.scala:25) finished in 0.057 s
+2017-12-28 13:29:16,068 - Job 0 finished: collect at Spark.scala:25, took 0.305629 s
+2017-12-28 13:29:16,075 - Invoking stop() from shutdown hook
+2017-12-28 13:29:16,105 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-12-28 13:29:16,105 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-12-28 13:29:16,105 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-12-28 13:29:16,105 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-12-28 13:29:16,106 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-12-28 13:29:16,107 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-12-28 13:29:16,108 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-12-28 13:29:16,108 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-12-28 13:29:16,161 - Stopped Spark web UI at http://172.16.0.43:4040
+2017-12-28 13:29:16,168 - MapOutputTrackerMasterEndpoint stopped!
+2017-12-28 13:29:16,172 - MemoryStore cleared
+2017-12-28 13:29:16,172 - BlockManager stopped
+2017-12-28 13:29:16,173 - BlockManagerMaster stopped
+2017-12-28 13:29:16,175 - OutputCommitCoordinator stopped!
+2017-12-28 13:29:16,178 - Successfully stopped SparkContext
+2017-12-28 13:29:16,178 - Shutdown hook called
+2017-12-28 13:29:16,179 - Deleting directory /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/spark-4edc42d4-2ebf-4089-8817-b99034fbd3e2
+2017-12-28 13:29:59,934 - Running Spark version 1.6.3
+2017-12-28 13:30:00,270 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-12-28 13:30:00,464 - Changing view acls to: btw
+2017-12-28 13:30:00,465 - Changing modify acls to: btw
+2017-12-28 13:30:00,465 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(btw); users with modify permissions: Set(btw)
+2017-12-28 13:30:00,944 - Successfully started service 'sparkDriver' on port 58180.
+2017-12-28 13:30:01,240 - Slf4jLogger started
+2017-12-28 13:30:01,269 - Starting remoting
+2017-12-28 13:30:01,380 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@172.16.0.43:58181]
+2017-12-28 13:30:01,384 - Successfully started service 'sparkDriverActorSystem' on port 58181.
+2017-12-28 13:30:01,393 - Registering MapOutputTracker
+2017-12-28 13:30:01,407 - Registering BlockManagerMaster
+2017-12-28 13:30:01,418 - Created local directory at /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/blockmgr-f10a80b9-6c97-42f5-bfb0-0cfbbbd7e8f6
+2017-12-28 13:30:01,430 - MemoryStore started with capacity 2.4 GB
+2017-12-28 13:30:01,474 - Registering OutputCommitCoordinator
+2017-12-28 13:30:01,624 - jetty-8.y.z-SNAPSHOT
+2017-12-28 13:30:01,660 - Started SelectChannelConnector@account.jetbrains.com:4040
+2017-12-28 13:30:01,660 - Successfully started service 'SparkUI' on port 4040.
+2017-12-28 13:30:01,662 - Started SparkUI at http://172.16.0.43:4040
+2017-12-28 13:30:01,732 - Starting executor ID driver on host localhost
+2017-12-28 13:30:01,748 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58182.
+2017-12-28 13:30:01,749 - Server created on 58182
+2017-12-28 13:30:01,750 - Trying to register BlockManager
+2017-12-28 13:30:01,752 - Registering block manager localhost:58182 with 2.4 GB RAM, BlockManagerId(driver, localhost, 58182)
+2017-12-28 13:30:01,753 - Registered BlockManager
+2017-12-28 13:30:02,249 - Starting job: collect at Spark.scala:25
+2017-12-28 13:30:02,267 - Registering RDD 1 (map at Spark.scala:23)
+2017-12-28 13:30:02,269 - Got job 0 (collect at Spark.scala:25) with 1 output partitions
+2017-12-28 13:30:02,269 - Final stage: ResultStage 1 (collect at Spark.scala:25)
+2017-12-28 13:30:02,269 - Parents of final stage: List(ShuffleMapStage 0)
+2017-12-28 13:30:02,270 - Missing parents: List(ShuffleMapStage 0)
+2017-12-28 13:30:02,276 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23), which has no missing parents
+2017-12-28 13:30:02,366 - Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 2.4 GB)
+2017-12-28 13:30:02,375 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1860.0 B, free 2.4 GB)
+2017-12-28 13:30:02,376 - Added broadcast_0_piece0 in memory on localhost:58182 (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:30:02,378 - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:30:02,381 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:23)
+2017-12-28 13:30:02,382 - Adding task set 0.0 with 1 tasks
+2017-12-28 13:30:02,416 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2043 bytes)
+2017-12-28 13:30:02,421 - Running task 0.0 in stage 0.0 (TID 0)
+2017-12-28 13:30:02,470 - Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+2017-12-28 13:30:02,475 - Finished task 0.0 in stage 0.0 (TID 0) in 75 ms on localhost (1/1)
+2017-12-28 13:30:02,476 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-12-28 13:30:02,479 - ShuffleMapStage 0 (map at Spark.scala:23) finished in 0.087 s
+2017-12-28 13:30:02,480 - looking for newly runnable stages
+2017-12-28 13:30:02,480 - running: Set()
+2017-12-28 13:30:02,480 - waiting: Set(ResultStage 1)
+2017-12-28 13:30:02,481 - failed: Set()
+2017-12-28 13:30:02,482 - Submitting ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25), which has no missing parents
+2017-12-28 13:30:02,487 - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 2.4 GB)
+2017-12-28 13:30:02,489 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2.4 GB)
+2017-12-28 13:30:02,489 - Added broadcast_1_piece0 in memory on localhost:58182 (size: 2.1 KB, free: 2.4 GB)
+2017-12-28 13:30:02,490 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:30:02,490 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:25)
+2017-12-28 13:30:02,491 - Adding task set 1.0 with 1 tasks
+2017-12-28 13:30:02,495 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1813 bytes)
+2017-12-28 13:30:02,496 - Running task 0.0 in stage 1.0 (TID 1)
+2017-12-28 13:30:02,509 - Getting 1 non-empty blocks out of 1 blocks
+2017-12-28 13:30:02,510 - Started 0 remote fetches in 4 ms
+2017-12-28 13:30:02,545 - Finished task 0.0 in stage 1.0 (TID 1). 1729 bytes result sent to driver
+2017-12-28 13:30:02,547 - Finished task 0.0 in stage 1.0 (TID 1) in 54 ms on localhost (1/1)
+2017-12-28 13:30:02,547 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-12-28 13:30:02,548 - ResultStage 1 (collect at Spark.scala:25) finished in 0.055 s
+2017-12-28 13:30:02,552 - Job 0 finished: collect at Spark.scala:25, took 0.302654 s
+2017-12-28 13:30:02,556 - Removed broadcast_0_piece0 on localhost:58182 in memory (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:30:02,561 - Invoking stop() from shutdown hook
+2017-12-28 13:30:02,591 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-12-28 13:30:02,592 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-12-28 13:30:02,593 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-12-28 13:30:02,594 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-12-28 13:30:02,594 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-12-28 13:30:02,594 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-12-28 13:30:02,594 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-12-28 13:30:02,647 - Stopped Spark web UI at http://172.16.0.43:4040
+2017-12-28 13:30:02,655 - MapOutputTrackerMasterEndpoint stopped!
+2017-12-28 13:30:02,659 - MemoryStore cleared
+2017-12-28 13:30:02,659 - BlockManager stopped
+2017-12-28 13:30:02,660 - BlockManagerMaster stopped
+2017-12-28 13:30:02,662 - OutputCommitCoordinator stopped!
+2017-12-28 13:30:02,665 - Successfully stopped SparkContext
+2017-12-28 13:30:02,665 - Shutdown hook called
+2017-12-28 13:30:02,666 - Deleting directory /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/spark-76698ce5-6b20-4ea6-9f70-e2ab23033ab7
+2017-12-28 13:32:49,965 - Running Spark version 1.6.3
+2017-12-28 13:32:50,252 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-12-28 13:32:50,426 - Changing view acls to: btw
+2017-12-28 13:32:50,427 - Changing modify acls to: btw
+2017-12-28 13:32:50,427 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(btw); users with modify permissions: Set(btw)
+2017-12-28 13:32:50,906 - Successfully started service 'sparkDriver' on port 58349.
+2017-12-28 13:32:51,210 - Slf4jLogger started
+2017-12-28 13:32:51,238 - Starting remoting
+2017-12-28 13:32:51,346 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@172.16.0.43:58350]
+2017-12-28 13:32:51,350 - Successfully started service 'sparkDriverActorSystem' on port 58350.
+2017-12-28 13:32:51,360 - Registering MapOutputTracker
+2017-12-28 13:32:51,374 - Registering BlockManagerMaster
+2017-12-28 13:32:51,385 - Created local directory at /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/blockmgr-38774864-724e-40f6-a470-26aeb8b498a9
+2017-12-28 13:32:51,397 - MemoryStore started with capacity 2.4 GB
+2017-12-28 13:32:51,442 - Registering OutputCommitCoordinator
+2017-12-28 13:32:51,580 - jetty-8.y.z-SNAPSHOT
+2017-12-28 13:32:51,616 - Started SelectChannelConnector@account.jetbrains.com:4040
+2017-12-28 13:32:51,616 - Successfully started service 'SparkUI' on port 4040.
+2017-12-28 13:32:51,618 - Started SparkUI at http://172.16.0.43:4040
+2017-12-28 13:32:51,692 - Starting executor ID driver on host localhost
+2017-12-28 13:32:51,712 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58351.
+2017-12-28 13:32:51,712 - Server created on 58351
+2017-12-28 13:32:51,713 - Trying to register BlockManager
+2017-12-28 13:32:51,715 - Registering block manager localhost:58351 with 2.4 GB RAM, BlockManagerId(driver, localhost, 58351)
+2017-12-28 13:32:51,717 - Registered BlockManager
+2017-12-28 13:32:52,226 - Starting job: collect at Spark.scala:23
+2017-12-28 13:32:52,242 - Registering RDD 1 (map at Spark.scala:21)
+2017-12-28 13:32:52,244 - Got job 0 (collect at Spark.scala:23) with 1 output partitions
+2017-12-28 13:32:52,244 - Final stage: ResultStage 1 (collect at Spark.scala:23)
+2017-12-28 13:32:52,245 - Parents of final stage: List(ShuffleMapStage 0)
+2017-12-28 13:32:52,246 - Missing parents: List(ShuffleMapStage 0)
+2017-12-28 13:32:52,252 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:21), which has no missing parents
+2017-12-28 13:32:52,339 - Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 2.4 GB)
+2017-12-28 13:32:52,348 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1860.0 B, free 2.4 GB)
+2017-12-28 13:32:52,350 - Added broadcast_0_piece0 in memory on localhost:58351 (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:32:52,352 - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:32:52,355 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:21)
+2017-12-28 13:32:52,356 - Adding task set 0.0 with 1 tasks
+2017-12-28 13:32:52,387 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2043 bytes)
+2017-12-28 13:32:52,393 - Running task 0.0 in stage 0.0 (TID 0)
+2017-12-28 13:32:52,440 - Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+2017-12-28 13:32:52,446 - Finished task 0.0 in stage 0.0 (TID 0) in 72 ms on localhost (1/1)
+2017-12-28 13:32:52,447 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-12-28 13:32:52,448 - ShuffleMapStage 0 (map at Spark.scala:21) finished in 0.084 s
+2017-12-28 13:32:52,449 - looking for newly runnable stages
+2017-12-28 13:32:52,449 - running: Set()
+2017-12-28 13:32:52,450 - waiting: Set(ResultStage 1)
+2017-12-28 13:32:52,450 - failed: Set()
+2017-12-28 13:32:52,451 - Submitting ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:23), which has no missing parents
+2017-12-28 13:32:52,457 - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 2.4 GB)
+2017-12-28 13:32:52,458 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2.4 GB)
+2017-12-28 13:32:52,458 - Added broadcast_1_piece0 in memory on localhost:58351 (size: 2.1 KB, free: 2.4 GB)
+2017-12-28 13:32:52,459 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:32:52,459 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:23)
+2017-12-28 13:32:52,460 - Adding task set 1.0 with 1 tasks
+2017-12-28 13:32:52,465 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1813 bytes)
+2017-12-28 13:32:52,465 - Running task 0.0 in stage 1.0 (TID 1)
+2017-12-28 13:32:52,477 - Getting 1 non-empty blocks out of 1 blocks
+2017-12-28 13:32:52,478 - Started 0 remote fetches in 4 ms
+2017-12-28 13:32:52,512 - Finished task 0.0 in stage 1.0 (TID 1). 1729 bytes result sent to driver
+2017-12-28 13:32:52,513 - Finished task 0.0 in stage 1.0 (TID 1) in 50 ms on localhost (1/1)
+2017-12-28 13:32:52,514 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-12-28 13:32:52,514 - ResultStage 1 (collect at Spark.scala:23) finished in 0.051 s
+2017-12-28 13:32:52,515 - Removed broadcast_0_piece0 on localhost:58351 in memory (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:32:52,518 - Job 0 finished: collect at Spark.scala:23, took 0.291587 s
+2017-12-28 13:32:52,526 - Invoking stop() from shutdown hook
+2017-12-28 13:32:52,556 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-12-28 13:32:52,556 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-12-28 13:32:52,557 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-12-28 13:32:52,558 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-12-28 13:32:52,559 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-12-28 13:32:52,559 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-12-28 13:32:52,559 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-12-28 13:32:52,559 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-12-28 13:32:52,559 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-12-28 13:32:52,612 - Stopped Spark web UI at http://172.16.0.43:4040
+2017-12-28 13:32:52,619 - MapOutputTrackerMasterEndpoint stopped!
+2017-12-28 13:32:52,623 - MemoryStore cleared
+2017-12-28 13:32:52,624 - BlockManager stopped
+2017-12-28 13:32:52,625 - BlockManagerMaster stopped
+2017-12-28 13:32:52,627 - OutputCommitCoordinator stopped!
+2017-12-28 13:32:52,629 - Successfully stopped SparkContext
+2017-12-28 13:32:52,630 - Shutdown hook called
+2017-12-28 13:32:52,630 - Deleting directory /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/spark-23b920be-bc0d-446d-ac61-6484bb52ef4c
+2017-12-28 13:36:37,676 - Running Spark version 1.6.3
+2017-12-28 13:36:38,059 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-12-28 13:36:38,453 - Changing view acls to: btw
+2017-12-28 13:36:38,454 - Changing modify acls to: btw
+2017-12-28 13:36:38,454 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(btw); users with modify permissions: Set(btw)
+2017-12-28 13:36:38,968 - Successfully started service 'sparkDriver' on port 58511.
+2017-12-28 13:36:39,377 - Slf4jLogger started
+2017-12-28 13:36:39,406 - Starting remoting
+2017-12-28 13:36:39,519 - Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@172.16.0.43:58524]
+2017-12-28 13:36:39,523 - Successfully started service 'sparkDriverActorSystem' on port 58524.
+2017-12-28 13:36:39,532 - Registering MapOutputTracker
+2017-12-28 13:36:39,545 - Registering BlockManagerMaster
+2017-12-28 13:36:39,555 - Created local directory at /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/blockmgr-3edc28d6-b12c-454d-b9b5-62c5248c1bf6
+2017-12-28 13:36:39,568 - MemoryStore started with capacity 2.4 GB
+2017-12-28 13:36:39,606 - Registering OutputCommitCoordinator
+2017-12-28 13:36:39,776 - jetty-8.y.z-SNAPSHOT
+2017-12-28 13:36:39,833 - Started SelectChannelConnector@account.jetbrains.com:4040
+2017-12-28 13:36:39,833 - Successfully started service 'SparkUI' on port 4040.
+2017-12-28 13:36:39,836 - Started SparkUI at http://172.16.0.43:4040
+2017-12-28 13:36:39,932 - Starting executor ID driver on host localhost
+2017-12-28 13:36:39,955 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58525.
+2017-12-28 13:36:39,955 - Server created on 58525
+2017-12-28 13:36:39,956 - Trying to register BlockManager
+2017-12-28 13:36:39,960 - Registering block manager localhost:58525 with 2.4 GB RAM, BlockManagerId(driver, localhost, 58525)
+2017-12-28 13:36:39,962 - Registered BlockManager
+2017-12-28 13:36:40,499 - Starting job: collect at Spark.scala:23
+2017-12-28 13:36:40,523 - Registering RDD 1 (map at Spark.scala:21)
+2017-12-28 13:36:40,526 - Got job 0 (collect at Spark.scala:23) with 1 output partitions
+2017-12-28 13:36:40,526 - Final stage: ResultStage 1 (collect at Spark.scala:23)
+2017-12-28 13:36:40,527 - Parents of final stage: List(ShuffleMapStage 0)
+2017-12-28 13:36:40,528 - Missing parents: List(ShuffleMapStage 0)
+2017-12-28 13:36:40,536 - Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:21), which has no missing parents
+2017-12-28 13:36:40,643 - Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 2.4 GB)
+2017-12-28 13:36:40,654 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1860.0 B, free 2.4 GB)
+2017-12-28 13:36:40,656 - Added broadcast_0_piece0 in memory on localhost:58525 (size: 1860.0 B, free: 2.4 GB)
+2017-12-28 13:36:40,657 - Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:36:40,661 - Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at map at Spark.scala:21)
+2017-12-28 13:36:40,663 - Adding task set 0.0 with 1 tasks
+2017-12-28 13:36:40,700 - Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2043 bytes)
+2017-12-28 13:36:40,706 - Running task 0.0 in stage 0.0 (TID 0)
+2017-12-28 13:36:40,767 - Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+2017-12-28 13:36:40,776 - Finished task 0.0 in stage 0.0 (TID 0) in 91 ms on localhost (1/1)
+2017-12-28 13:36:40,777 - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2017-12-28 13:36:40,779 - ShuffleMapStage 0 (map at Spark.scala:21) finished in 0.105 s
+2017-12-28 13:36:40,779 - looking for newly runnable stages
+2017-12-28 13:36:40,780 - running: Set()
+2017-12-28 13:36:40,780 - waiting: Set(ResultStage 1)
+2017-12-28 13:36:40,781 - failed: Set()
+2017-12-28 13:36:40,782 - Submitting ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:23), which has no missing parents
+2017-12-28 13:36:40,791 - Block broadcast_1 stored as values in memory (estimated size 4.1 KB, free 2.4 GB)
+2017-12-28 13:36:40,793 - Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2.4 GB)
+2017-12-28 13:36:40,794 - Added broadcast_1_piece0 in memory on localhost:58525 (size: 2.1 KB, free: 2.4 GB)
+2017-12-28 13:36:40,794 - Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+2017-12-28 13:36:40,795 - Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at groupByKey at Spark.scala:23)
+2017-12-28 13:36:40,795 - Adding task set 1.0 with 1 tasks
+2017-12-28 13:36:40,802 - Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1813 bytes)
+2017-12-28 13:36:40,803 - Running task 0.0 in stage 1.0 (TID 1)
+2017-12-28 13:36:40,817 - Getting 1 non-empty blocks out of 1 blocks
+2017-12-28 13:36:40,818 - Started 0 remote fetches in 4 ms
+2017-12-28 13:36:40,849 - Finished task 0.0 in stage 1.0 (TID 1). 1729 bytes result sent to driver
+2017-12-28 13:36:40,851 - Finished task 0.0 in stage 1.0 (TID 1) in 52 ms on localhost (1/1)
+2017-12-28 13:36:40,851 - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2017-12-28 13:36:40,852 - ResultStage 1 (collect at Spark.scala:23) finished in 0.054 s
+2017-12-28 13:36:40,856 - Job 0 finished: collect at Spark.scala:23, took 0.356480 s
+2017-12-28 13:36:40,863 - Invoking stop() from shutdown hook
+2017-12-28 13:36:40,894 - stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+2017-12-28 13:36:40,895 - stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+2017-12-28 13:36:40,895 - stopped o.s.j.s.ServletContextHandler{/api,null}
+2017-12-28 13:36:40,895 - stopped o.s.j.s.ServletContextHandler{/,null}
+2017-12-28 13:36:40,895 - stopped o.s.j.s.ServletContextHandler{/static,null}
+2017-12-28 13:36:40,895 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/executors,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/environment,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+2017-12-28 13:36:40,896 - stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/storage,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+2017-12-28 13:36:40,897 - stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+2017-12-28 13:36:40,898 - stopped o.s.j.s.ServletContextHandler{/stages,null}
+2017-12-28 13:36:40,898 - stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+2017-12-28 13:36:40,898 - stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+2017-12-28 13:36:40,898 - stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+2017-12-28 13:36:40,898 - stopped o.s.j.s.ServletContextHandler{/jobs,null}
+2017-12-28 13:36:40,951 - Stopped Spark web UI at http://172.16.0.43:4040
+2017-12-28 13:36:40,962 - MapOutputTrackerMasterEndpoint stopped!
+2017-12-28 13:36:40,966 - MemoryStore cleared
+2017-12-28 13:36:40,967 - BlockManager stopped
+2017-12-28 13:36:40,972 - BlockManagerMaster stopped
+2017-12-28 13:36:40,973 - OutputCommitCoordinator stopped!
+2017-12-28 13:36:40,976 - Successfully stopped SparkContext
+2017-12-28 13:36:40,977 - Shutdown hook called
+2017-12-28 13:36:40,978 - Deleting directory /private/var/folders/49/2ggfwgkn5gs3_cq2jv_n0tf40000gn/T/spark-e0d1a13a-bc5b-4ca1-968a-f8e478f33872

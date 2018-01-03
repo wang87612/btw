@@ -18,8 +18,9 @@ object SparkReadAvro extends App {
 
   val path = "file:///Users/btw/Downloads/part-m-00000.avro"
   sc.hadoopFile[AvroWrapper[GenericRecord], NullWritable, AvroInputFormat[GenericRecord]](path).foreach(v => {
-    if (v._1.datum().get("id").toString.equals("566367")) {
-      println(v._1.datum().get("complete_address"))
-    }
+//    if (v._1.datum().get("id").toString.equals("566367")) {
+//      println(v._1.datum().get("complete_address"))
+//    }
+    println(v)
   })
 }
