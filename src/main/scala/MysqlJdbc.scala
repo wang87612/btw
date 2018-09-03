@@ -1,13 +1,17 @@
+import java.io.{File, PrintWriter}
 import java.sql.{DriverManager, ResultSet}
 
+import org.apache.hadoop.hive.ql.parse.ParseDriver
+
 import scala.collection.mutable.ArrayBuffer
+import scala.collection.JavaConversions._
 
 /**
   * Created by wangpeng on 2016/12/2.
   */
 object MysqlJdbc extends App {
 
-  val dbc = "jdbc:mysql://172.16.4.31:3306/hive?user=root&password=123456"
+  val dbc = "jdbc:mysql://192.168.158.100:3307/cif_offline_check?user=prod_hanxiaoqiang&password=prod_hanxiaoqiang.jKcKnsDBDoNCymr5xvnrJqf4GMqmBs4T"
 
 
   val connection = (sql: String, resultLogic: (ResultSet) => Any) => {
@@ -21,12 +25,25 @@ object MysqlJdbc extends App {
       conn.close()
     }
   }
-
-  println(connection("SELECT * FROM CDS", result => {
-    val arrbuf = ArrayBuffer[Any]()
+  val writer = new PrintWriter(new File("/Users/btw/sql.txt"))
+  connection("select stament from cif_offline_check.spark_monitor where start_time>='2018/06/01'", result => {
     while (result.next()) {
-      arrbuf += (result.getString(1))
+      try {
+        // val pd = new ParseDriver()
+        //        ParserTableName.getTableNameBySql(result.getString(1)).foreach(println(_))
+        //val ast = pd.parse(result.getString(1))
+        //val strTree = ast.toStringTree()
+        //System.out.println(strTree)
+
+        writer.write(result.getString(1).replaceAll("\n", " ") + System.getProperty("line.separator"))
+
+      } catch {
+        case e: Exception => null
+      }
+
     }
-    arrbuf
-  }))
+
+    writer.flush()
+    writer.close()
+  })
 }
